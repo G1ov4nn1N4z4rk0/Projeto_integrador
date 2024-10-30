@@ -27,7 +27,7 @@ def conexao_sensor(client, userdata, flags, rc):
 def msg_sensor(client, userdata, msg):
     global mqtt_dados
     # decodificar a mensagem recebida de bytes para string
-    valor =msg.payload.decode('utf-8')
+    valor = msg.payload.decode('utf-8')
     #decodificar de string para JSON
     mqtt_dados = json.loads(valor)
 
